@@ -1,0 +1,44 @@
+<!--pages/home/home.wxml-->
+<block wx:if="{{carousel.length > 0}}">
+<view>
+    <!-- header -->
+    <view class="header-nav">
+        <swiper class="swiper-box" indicator-dots="{{indicatorDots}} " autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color="rgba(255, 255, 255,0.3)" indicator-active-color="#fff">
+            <block wx:for="{{carousel}}"  wx:key="index">
+                <swiper-item bindtap="oncarousel" data-cartoonid="{{item._id}}">
+                    <image src="{{item.imageUrl}}" class="swipte-item-img"></image>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <!-- 排行/书架 -->
+    <view class="ranking_box">
+        <view bindtap="onRead">
+            <image src="../../public/images/select-1.png"></image>
+        </view>
+        <view bindtap="toBooksheif">
+            <image src="../../public/images/select-2.png"></image>
+        </view>
+    </view>
+
+</view>
+<!-- 人气推荐 -->
+<block wx:for="{{hotAndRecommend}}" wx:key="index">
+    <view class="style_border"></view>
+    <view class="container_label">
+        <view class="container_label-title">
+            <view class="title-recommend">{{item.title}}</view>
+            <view class="title-more">更多<text>></text></view>
+        </view>
+        <view class="container_label_list">
+            <block wx:for="{{item.data}}" wx:for-item="v" wx:key="_id">
+                <view data-cartoonid="{{v._id}}" bindtap="onDetails" class="list_item">
+                    <image src="{{v.imageUrl}}"></image>
+                    <view class="list_item_t">{{v.name}}</view>
+                    <text>{{v.description}}</text>
+                </view>
+            </block>
+        </view>
+    </view>
+</block>
+</block>

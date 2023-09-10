@@ -1,0 +1,14 @@
+<!--pages/classification/classification.wxml-->
+<!-- 导航 -->
+<view class="navbar">
+    <view wx:for="{{navList}}" wx:key="index" bindtap="clickNavbar" class="navbar-title {{active== index ? 'active':''}}" data-id="{{item._id}}" data-active="{{index}}">{{item.name}}</view>
+</view>
+<view class="class-content">
+    <view class="container_label_list">
+        <view wx:for="{{cartoon}}" wx:key="index" class="list_item" bindtap="clickCartoon" data-cartoonId="{{item._id}}">
+            <image src="{{item.imageUrl}}"></image>
+            <view class="list_item_t">{{item.name}}</view>
+            <text>{{item.description}}</text>
+        </view>
+    </view>
+</view>

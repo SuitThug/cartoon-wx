@@ -1,0 +1,62 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/logs/logs",
+        "pages/home/index",
+        "pages/classification/index",
+        "pages/bookcase/bookcase",
+        "pages/user/index",
+        "pages/cartoonDetail/index",
+        "pages/cartoon-page/index",
+        "pages/read/index"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTextStyle": "black"
+    },
+    "sitemapLocation": "sitemap.json",
+    "usingComponents": {
+        "van-action-sheet": "./miniprogram_npm/@vant/weapp/action-sheet/index",
+        "van-field": "./miniprogram_npm/@vant/weapp/field/index",
+        "van-button": "./miniprogram_npm/@vant/weapp/button/index",
+        "van-toast": "./miniprogram_npm/@vant/weapp/toast/index",
+        "van-cell": "./miniprogram_npm/@vant/weapp/cell/index",
+        "van-cell-group": "./miniprogram_npm/@vant/weapp/cell-group/index",
+        "van-tab": "./miniprogram_npm/@vant/weapp/tab/index",
+        "van-tabs": "./miniprogram_npm/@vant/weapp/tabs/index",
+        "van-swipe-cell": "./miniprogram_npm/@vant/weapp/swipe-cell/index",
+        "van-dialog": "./miniprogram_npm/@vant/weapp/dialog/index"
+    },
+    "tabBar": {
+        "color":"#999",
+        "list": [
+            {
+                "pagePath": "pages/home/index",
+                "text": "首页",
+                "iconPath": "./assets/images/ic_tab_home_no.png",
+                "selectedIconPath":"./assets/images/ic_tab_home_hl.png"
+            },
+            {
+                "pagePath": "pages/classification/index",
+                "text": "分类",
+                "iconPath": "./assets/images/ic_tab_class_no.png",
+                "selectedIconPath":"./assets/images/ic_tab_class_hl.png"
+               
+            },
+            {
+                "pagePath": "pages/bookcase/bookcase",
+                "text": "书架",
+                "iconPath": "./assets/images/ic_tab_me_no.png",
+                "selectedIconPath":"./assets/images/ic_tab_me_hl.png"
+               
+            },
+            {
+                "pagePath": "pages/user/index",
+                "text": "我的",
+                "iconPath": "./assets/images/ic_tab_book_no.png",
+                "selectedIconPath":"./assets/images/ic_tab_book_hl.png"
+            }
+        ]
+    }
+}

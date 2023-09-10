@@ -1,0 +1,31 @@
+<!--pages/bookcase/bookcase.wxml-->
+<!-- <text>pages/bookcase/bookcase.wxml</text> -->
+
+<van-tabs active="{{ active }}" bind:change="onChange" wx:if="{{collect.length > 0}}">
+    <van-tab title="收藏">
+        <view class="container_label_list">
+            <view wx:for="{{collect}}" wx:key="index" class="list_item" data-id="{{item._id}}" bindtap="toDetail">
+                <image src="{{item.imageUrl}}"></image>
+                <view class="list_item_t">{{item.name}}</view>
+                <text>{{item.description}}</text>
+            </view>
+        </view>
+    </van-tab>
+    <van-tab title="历史">
+        <view class="history">
+            <view class="history-item" wx:for="{{historyList}}" wx:key="index">
+            <image src="{{item.imageUrl}}"></image>
+              <view class="history-right">
+                   <view class="right_title">{{item.name}}</view>
+                   <!-- <view >浏览时间:{{item.updateTime}}</view> -->
+                   <view class="author">作者：{{item.author}}</view>
+                   <view class="description">简介：{{item.description}}</view>
+              </view>
+            </view>
+        </view>
+
+    </van-tab>
+</van-tabs>
+<view wx:else>
+    你还没有添加任何图书
+</view>
