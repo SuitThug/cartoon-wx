@@ -1,0 +1,13 @@
+<!--pages/cartoon-page/index.wxml-->
+<view class="carton-page">
+   <scroll-view  scroll-y="true" style="height: 100vh;">
+     <block wx:for="{{chapterImg}}" wx:key="index">
+      <image src="{{item.url}}" mode='widthFix' style="width: 100%;" lazy-load="true"></image>
+     </block>
+     <view class="onChangePage">
+    <button bindtap="tabChapter"data-id="{{chapter_id}}" data-type="{{1}}">上一话</button>
+    <button bindtap="tabChapter" data-id="{{chapter_id}}" data-type="{{2}}">下一话</button>
+   </view>
+   </scroll-view>
+ 
+</view>

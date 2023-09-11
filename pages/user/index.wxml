@@ -1,0 +1,44 @@
+<!--pages/user/index.wxml-->
+<!-- <text>pages/user/index.wxml</text> -->
+
+<view class="user">
+    <view class="header">
+        <image src="../../assets/images/center-bg.png" />
+        <view class="header_ben" wx:if="{{!user.username}}">
+            <van-button type="default" size="normal" custom-class="btn" bind:click="login">登录</van-button>
+            <van-button type="default" size="normal" custom-class="btn" bind:click="register">注册</van-button>
+        </view>
+        <view class="header_userinfo" wx:else>
+            <image src="{{user.avatar}}"></image>
+            <view>{{user.username}}</view>
+        </view>
+        <view wx:if="{{user.username}}">
+            <van-cell title="观看历史" is-link size="large" />
+            <van-cell title="我的收藏" is-link size="large" />
+            <van-button type="primary"custom-class="logoutBtn" style="margin-top:100rpx" round block color="linear-gradient(133deg, #FF4B2B 0%, #FF416B 100%)" bindtap="exitOut">退出登录</van-button>
+        </view>
+    </view>
+    <van-action-sheet overlay show="{{ show }}" title="{{isLogin?'登录':'注册'}}" bind:close="onClose">
+        <view style="padding: 20rpx 20rpx 100rpx" wx:if="{{isLogin}}">
+            <van-cell-group>
+                <van-field model:value="{{ phone }}" placeholder="请输入手机号" border="{{ true }}" bind:change="onChange" label="手机号"  size="large"/>
+                <van-field model:value="{{ password }}" placeholder="请输入密码" border="{{ true }}" bind:change="onChange" label="密码"  size="large" />
+            </van-cell-group>
+            <view class="reg_info" bindtap="isLoginOrReg">注册</view>
+            <van-button type="primary" round block custom-class="submitBtn" color="linear-gradient(133deg, #FF4B2B 0%, #FF416B 100%)" bindtap="doneLogin">登录</van-button>
+        </view>
+        <!-- 注册 -->
+        <view style="padding: 20rpx 20rpx 100rpx" wx:else>
+            <van-cell-group>
+                <van-field value="{{ value }}" placeholder="请输入昵称" border="{{ true }}" bind:change="onChange" label="手机号" size="large" />
+                <van-field value="{{ value }}" placeholder="请输入手机号" border="{{ true }}" bind:change="onChange" label="密码" size="large" />
+                <van-field value="{{ value }}" placeholder="请输入密码" border="{{ true }}" bind:change="onChange" label="密码"   size="large"/>
+            </van-cell-group>
+            <view class="reg_info" bindtap="isLoginOrReg">登录</view>
+            <van-button type="primary"  round block custom-class="submitBtn" color="linear-gradient(133deg, #FF4B2B 0%, #FF416B 100%)">注册</van-button>
+        </view>
+
+
+    </van-action-sheet>
+
+</view>

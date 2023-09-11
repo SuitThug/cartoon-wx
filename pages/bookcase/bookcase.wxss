@@ -1,0 +1,107 @@
+/* pages/bookcase/bookcase.wxss */
+
+
+.container_label_list {
+    padding: 0 25rpx;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 40rpx;
+}
+
+.list_item {
+    margin: 0 10rpx 30rpx 10rpx;
+    width: calc(90% / 3);
+    min-width: calc(90% / 3);
+    max-width: calc(90% / 3);
+    list-style: none;
+    border-radius: 10rpx;
+
+}
+
+.list_item:nth-child(3n) {
+    margin-right: 0;
+}
+
+.list_item image {
+    width: 100%;
+    max-height: 300rpx;
+    border-radius: 10rpx;
+
+}
+
+.list_item text {
+    color: #999999;
+    display: block;
+    width: 210rpx;
+    font-size: 25rpx;
+    margin-top: 10rpx;
+    /*  （文字长度超出限定宽度，则隐藏超出的内容） */
+    overflow: hidden;
+    /* （设置文字在一行显示，不能换行） */
+    white-space: nowrap;
+    /* 规定当文本溢出时，显示省略符号来代表被修剪的文本） */
+    text-overflow: ellipsis;
+}
+
+.list_item_t {
+    font-size: 30rpx;
+}
+
+.van-swipe-cell__left,
+.van-swipe-cell__right {
+    display: inline-block;
+    width: 65px;
+    height: 44px;
+    font-size: 15px;
+    line-height: 44px;
+    color: #fff;
+    text-align: center;
+    background-color: #f44;
+}
+
+/* 浏览历史 */
+
+.history-item {
+    height: 300rpx;
+    display: flex;
+    color: #909090;
+    font-size: 30rpx;
+    line-height: 70rpx;
+    border-top: 1px solid #EBEBEB;
+    margin: 20rpx 25rpx;
+    padding: 30rpx 0;
+}
+
+.history-right {
+    flex: 1;
+    margin-left: 20rpx;
+}
+
+.history-item image {
+    width: 230rpx;
+    height: 300rpx;
+    border-radius: 10rpx;
+}
+
+.right_title {
+    font-size: 35rpx;
+    color: #121212;
+}
+.author{
+    white-space: nowrap;
+    text-overflow: ellipsis;/*省略号*/
+    overflow: hidden;/*超出隐藏*/
+}
+.description {
+    width: 100%;
+    height: 150rpx;
+    line-height: 50rpx;
+    display: -webkit-box;/*将文本看做一行*/
+    -webkit-box-orient: vertical;/*设置为垂直方向*/
+    text-overflow: ellipsis;/*省略号*/
+    overflow: hidden;/*超出隐藏*/
+    /*限制行数*/
+    -webkit-line-clamp: 3;
+
+}

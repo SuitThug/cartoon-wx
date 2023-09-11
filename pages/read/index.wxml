@@ -1,0 +1,16 @@
+<!--pages/read/index.wxml-->
+<!-- <text>pages/read/index.wxml</text> -->
+<view class="history">
+    <view class="history-item" wx:for="{{readList}}" wx:key="index">
+        <view style="position: relative;">
+            <image src="{{item.imageUrl}}"></image>
+            <view class="rank-1">{{index+1}}</view>
+        </view>
+        <view class="history-right">
+            <view class="right_title">{{item.name}}</view>
+            <!-- <view >浏览时间:{{item.updateTime}}</view> -->
+            <view class="author">作者：{{item.author}}</view>
+            <view class="description">简介：{{item.description}}</view>
+        </view>
+    </view>
+</view>

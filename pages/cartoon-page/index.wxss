@@ -1,0 +1,26 @@
+/* pages/cartoon-page/index.wxss */
+
+.onChangePage{
+    width: 100%;
+    height: 110rpx;
+    background-color: rgba(0,0,0,0.80);
+    /* background: linear-gradient(133deg, #FF4B2B 0%, #FF416B 100%); */
+    /* position: fixed;
+    bottom: 20rpx;
+    left: 50%;
+    transform: translate(-50%); */
+      /* border-radius: 20rpx; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+}
+.onChangePage button{
+    width: 230rpx !important;
+    height: 80rpx;
+    font-weight: 500;
+    font-size:38rpx;
+    line-height: 80rpx;
+    /* color: #ffffff; */
+   
+}

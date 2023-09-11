@@ -1,0 +1,8 @@
+<!--components/cell/index.wxml-->
+<view class="container_label_list">
+    <view wx:for="{{30}}" wx:key="{{index}}" class="list_item">
+        <image src="../../public/images/list1.jpg" mode="widthFix"></image>
+        <view class="list_item_t">篮球少年王</view>
+        <text>九龙头高中校队的得得得的改革各色各位是各色而过552</text>
+    </view>
+</view>

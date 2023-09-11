@@ -1,0 +1,83 @@
+.active {
+    color: red;
+
+}
+
+page {
+    background-color: #f7f7f7;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    position: relative;
+    padding: 0rpx 25rpx 25rpx;
+    font-size: 30rpx;
+    background-color: #fff;
+}
+
+.navbar-title {
+    width: 18%;
+    text-align: center;
+    margin-top: 25rpx;
+   
+}
+
+/* 漫画 */
+
+.class-content {
+    margin-top: 30rpx;
+}
+
+.container_label_list {
+    padding: 0 25rpx;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.list_item {
+    margin: 0 10rpx 30rpx 10rpx;
+    width: calc(90% / 3);
+    list-style: none;
+    border-radius: 10rpx;
+
+
+}
+
+.list_item:nth-child(3n) {
+    margin-right: 0;
+}
+
+.list_item image {
+    width: 100%;
+    max-height: 300rpx;
+    border-radius: 10rpx;
+
+}
+
+.list_item text {
+    color: #999999;
+    display: block;
+    width: 210rpx;
+    font-size: 25rpx;
+    margin-top: 10rpx;
+    /*  （文字长度超出限定宽度，则隐藏超出的内容） */
+    overflow: hidden;
+    /* （设置文字在一行显示，不能换行） */
+    white-space: nowrap;
+    /* 规定当文本溢出时，显示省略符号来代表被修剪的文本） */
+    text-overflow: ellipsis;
+}
+
+.list_item_t {
+    font-size: 30rpx;
+    /*  （文字长度超出限定宽度，则隐藏超出的内容） */
+    overflow: hidden;
+    /* （设置文字在一行显示，不能换行） */
+    white-space: nowrap;
+    /* 规定当文本溢出时，显示省略符号来代表被修剪的文本） */
+    text-overflow: ellipsis;
+}

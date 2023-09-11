@@ -1,0 +1,41 @@
+/* components/cell/index.wxss */
+
+
+.container_label_list {
+    padding: 0rpx 30rpx;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+.list_item {
+    width: 30%;
+    margin: 10rpx 0 20rpx;
+    list-style: none;
+    border-radius: 10rpx;
+ 
+}
+
+.list_item image {
+    width: 100%;
+    height: 70%;
+    border-radius: 10rpx;
+}
+
+.list_item text {
+    color: #999999;
+    display:block;
+     width: 210rpx;
+    font-size: 25rpx;
+    margin-top: 10rpx;
+    /*  （文字长度超出限定宽度，则隐藏超出的内容） */
+    overflow: hidden;
+    /* （设置文字在一行显示，不能换行） */
+    white-space: nowrap;
+    /* 规定当文本溢出时，显示省略符号来代表被修剪的文本） */
+    text-overflow: ellipsis;
+}
+
+.list_item_t {
+    font-size: 30rpx;
+}
