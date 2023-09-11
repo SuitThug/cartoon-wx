@@ -1,6 +1,12 @@
 # cartoon-wx
 漫画云微信小程序
 
+## 展示部分页面
+![](assets/images/homewx.png)
+![](assets/images/fl.png)
+![](assets/images/xq.png)
+![](assets/images/books.png)
+
 ## 后台管理系统
 [地址](https://github.com/SuitThug/cartoon-admin)
 
